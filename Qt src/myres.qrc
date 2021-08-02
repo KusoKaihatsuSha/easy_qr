@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/new/res">
+        <file>files/qr.ico</file>
+        <file>files/rc.rc</file>
+        <file>files/qrcode_32.dll</file>
+        <file>files/qrcode_64.dll</file>
+    </qresource>
+</RCC>
