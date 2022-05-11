@@ -18,7 +18,7 @@ go build -o qrcode.dll -buildmode=c-shared -ldflags "-s -w"
 
 For using DLL on windows use
 
-- Save file:
+- Save to file:
 
 ```sh
 RUNDLL32 qrcode.dll, Rundll32save "test example" 1 testName.png
