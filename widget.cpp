@@ -26,19 +26,24 @@ void Widget::on_pushButton_clicked()
     QByteArray ba = str1__.toUtf8();
     char *c_str2 = ba.data();
 
-    #ifdef Q_PROCESSOR_X86_64
-        QFile dllqr(":/new/res/files/qrcode_64.dll");
-        dllqr.copy("qrcode_64.dll");
-        qDebug() << dllqr.readLink();
-        QLibrary lib("qrcode_64.dll");
-    #endif
+//    #ifdef Q_PROCESSOR_X86_64
+//        QFile dllqr(":/new/res/files/qrcode_64.dll");
+//        dllqr.copy("qrcode_64.dll");
+//        qDebug() << dllqr.readLink();
+//        QLibrary lib("qrcode_64.dll");
+//    #endif
 
-    #ifdef Q_PROCESSOR_X86_32
-        QFile dllqr(":/new/res/files/qrcode_32.dll");
-        dllqr.copy("qrcode_32.dll");
-        qDebug() << dllqr.readLink();
-        QLibrary lib("qrcode_32.dll");
-    #endif
+//    #ifdef Q_PROCESSOR_X86_32
+//        QFile dllqr(":/new/res/files/qrcode_32.dll");
+//        dllqr.copy("qrcode_32.dll");
+//        qDebug() << dllqr.readLink();
+//        QLibrary lib("qrcode_32.dll");
+//    #endif
+
+    QFile dllqr(":/new/res/files/qrcode.dll");
+    dllqr.copy("qrcode.dll");
+    qDebug() << dllqr.readLink();
+    QLibrary lib("qrcode.dll");
 
 
     if( !lib.load() ) {
